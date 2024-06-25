@@ -3,7 +3,7 @@
 import { revalidateTag } from 'next/cache'
 import { Snack } from './types'
 
-const BASE_URL = 'http://localhost:8000/snacks';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 export async function getSnacks() {
     const res = await fetch(BASE_URL,{ next: { tags: ['collection'] }})

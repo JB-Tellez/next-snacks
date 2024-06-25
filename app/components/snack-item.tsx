@@ -21,7 +21,6 @@ export default function SnackItem({ snack }: { snack: Snack }) {
             <CardContent className="flex justify-between">
                 <CardDescription>{snack.description}</CardDescription>
                 <div className="flex">
-                    <MagnifyingGlassIcon id={snack.id} />
                     <DeleteIcon id={snack.id} />
                     <EditIcon id={snack.id} />
                 </div>
